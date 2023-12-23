@@ -1,0 +1,141 @@
+:root {
+  --primary: #a3c1ad;    /* Soft blue-green */
+  --secondary: #7aa6d2;  /* Medium blue */
+  --tertiary: #4d7298;   /* Darker blue */
+  --light-dark: #345f7c; /* Deep blue */
+  --dark: #23395d;       /* Very dark blue */
+  --border-radius: 0.3rem;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, a, p, input, .card-header h2, .btn, .nav-item a, .hero, .app-title a, .list-item {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--dark);
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+h2 a:visited, .nav-item a {
+  color: var(--tertiary);
+}
+
+h2 a, .btn, .nav-item a, .app-title a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+p, .form-input {
+  font-size: 1.2rem;
+}
+
+input, .form-input, .btn {
+  width: 100%;
+  border: 1px solid var(--light-dark);
+  background: #FFF;
+  padding: 10px;
+}
+
+.card-header h2, .app-title {
+  color: var(--primary);
+}
+
+.btn {
+  font-size: 1.3rem;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  background-color: var(--light-dark);
+  box-shadow: 3px 3px var(--dark);
+  transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+  background-color: var(--tertiary);
+  box-shadow: 2px 2px var(--dark);
+  transform: translate(0, 0);
+}
+
+.navbar, .hero, .card-header, .footer a {
+  background-color: var(--dark);
+}
+
+.hero p, .list-item {
+  color: var(--primary);
+}
+
+.list-item:hover {
+  background-color: var(--dark);
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+}
+
+.form-label {
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+/* Responsive Grid */
+[class*="col-"] {
+  flex-grow: 1;
+  padding: 0 1%;
+}
+
+@media screen and (min-width: 640px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+  .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    flex-basis: calc(100% * var(--col-size) / 12 - 2%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    flex-basis: calc(100% * var(--col-size) / 12 - 2%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+  .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    flex-basis: calc(100% * var(--col-size) / 12 - 2%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
+  .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+    flex-basis: calc(100% * var(--col-size) / 12 - 2%);
+  }
+}
+
+/* Utility classes */
+.flex-row, .flex-column {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-space-between, .justify-space-around, .justify-flex-start,
+.justify-flex-end, .justify-center {
+  justify-content: space-between; /* Replace with appropriate value */
+}
+
+.align-stretch, .align-end, .align-center {
+  align-items: stretch; /* Replace with appropriate value */
+}
